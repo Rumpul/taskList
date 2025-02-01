@@ -1,0 +1,276 @@
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #f4f4f9, #dfe9f3);
+	color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 20px;
+	color: #4a4a4a;
+}
+
+p {
+	margin: 10px 0;
+	font-size: 16px;
+	color: #555;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+input,
+textarea,
+select,
+button {
+	padding: 12px;
+	margin: 5px;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	width: 100%;
+	max-width: 400px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button {
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+	background-color: #0056b3;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+	transform: translateY(0);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link-button {
+	background: none;
+	color: #007bff;
+	text-decoration: underline;
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+	padding: 0;
+	transition: color 0.3s ease;
+}
+
+.link-button:hover {
+	color: #0056b3;
+	color: white;
+}
+
+
+.auth-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+	background: white;
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+	transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.task-list-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 90vw;
+}
+
+.task-container {
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+	background: white;
+	width: 100%;
+	max-width: 600px;
+	text-align: center;
+	transition: box-shadow 0.3s ease;
+}
+
+.task-container:hover {
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.task-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f9f9f9;
+	padding: 15px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.task-actions {
+	display: flex;
+	gap: 10px;
+}
+
+.edit-button {
+	background-color: #28a745;
+}
+
+.delete-button {
+	background-color: #dc3545;
+}
+
+.save-button {
+	background-color: #28a745;
+}
+
+.cancel-button {
+	background-color: #6c757d;
+}
+
+.logout-button {
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-bottom: 20px;
+	transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+	background-color: #a71d2a;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modal-content {
+	background: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 400px;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.filter-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+label {
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+select {
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	width: 100%;
+	max-width: 300px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+
+	.container,
+	.task-container {
+		padding: 15px;
+	}
+
+	.task-item {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.task-actions {
+		margin-top: 10px;
+	}
+
+	input,
+	textarea,
+	select,
+	button {
+		max-width: 100%;
+	}
+}
