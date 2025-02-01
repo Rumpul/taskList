@@ -10,6 +10,11 @@ class UserSerializer(serializers.ModelSerializer):
 				extra_kwargs = {'password': {'write_only': True}}
 
 		def create(self, validated_data):
+				"""
+				Переопределенный метод `create` для создания нового пользователя.
+				Вместо стандартного создания объекта мы используем метод `create_user`
+				для хэширования пароля перед сохранением пользователя в базе данных.
+				"""
 				user = User.objects.create_user(**validated_data)
 				return user
 
